@@ -10,7 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>eureka_server_1</artifactId>
+    <artifactId>eureka_server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <!-- Eureka依赖-->
