@@ -20,8 +20,8 @@
 
     <modules>
         <module>eureka/eureka_server</module>
-        <module>eureka/eureka_provider_1</module>
-        <module>eureka/eureka_customer_1</module>
+        <module>eureka/eureka_provider</module>
+        <module>eureka/eureka_customer</module>
     </modules>
 
     <properties>
