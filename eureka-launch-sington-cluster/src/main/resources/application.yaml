@@ -5,7 +5,7 @@ server:
   port: 8000
 eureka:
   instance:
-    hostname: sc.kk.com
+    hostname: eureka0.kk.com
     # 向其他服务发送心跳间隔的时间(s)，默认是30s
     leaseRenewalIntervalInSeconds: 3
     # 判断最后一次收到某个实例的心跳时间间隔，超出该时间未收到，则认为某个实例已经下线。默认90s

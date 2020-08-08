@@ -7,6 +7,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/eureka-launch-sington-cluster/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-call/provider/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-call/customer/pom.xml" />
       </list>
     </option>
   </component>

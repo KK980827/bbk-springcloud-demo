@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-customer-1
+server:
+  port: 10001
+eureka:
+  client:
+    # 是否作为客户端主动对外注册
+    register-with-eureka: true
+    # 是否从别的Server拉取客户端注册信息
+    fetch-registry: true
+    serviceUrl:
+      # Eureka server的地址, 只会注册到eureka集群的节点1上，如果集群启动，会自动同步注册信息到其他节点上.
+      defaultZone: http://eureka0.kk.com:8000/eureka/
+  instance:
+    hostname: customer1.kk.com
+    lease-renewal-interval-in-seconds: 3
