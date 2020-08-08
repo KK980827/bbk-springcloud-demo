@@ -1,0 +1,15 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    # 必须正确配置该地址，其他Client想要注册到本Server的时候，就需要填入该地址。
+    hostname: eureka1.kk.com
+  client:
+    # 是否作为客户端主动对外注册
+    register-with-eureka: true
+    # 是否从别的Server拉取客户端注册信息
+    fetch-registry: true
+    # 此处serviceUrl必须使用驼峰法！使用service-url的话，检测不到，会继续使用默认的地址。
+    serviceUrl:
+      # 必须指定一个hostname确实存在的地址去注册。否则将认为要连接的这个复制节点不可达
+      defaultZone: http://eureka2.kk.com:8002/eureka/,http://eureka3.kk.com:8003/eureka/

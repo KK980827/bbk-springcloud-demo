@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka_server_cluster
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: sc.kk.com
+    # 向其他服务发送心跳间隔的时间(s)，默认是30s
+    leaseRenewalIntervalInSeconds: 3
+    # 判断最后一次收到某个实例的心跳时间间隔，超出该时间未收到，则认为某个实例已经下线。默认90s
+    leaseExpirationDurationInSeconds: 5
+  server:
+    # 设置EurekaServer主动驱逐失效实例的时间间隔(ms)，默认60s
+    eviction-interval-timer-in-ms: 30000
+  client:
+    # 是否作为客户端主动对外注册
+    register-with-eureka: false
+    # 是否从别的Server拉取客户端注册信息
+    fetch-registry: false
+    # 此处serviceUrl必须使用驼峰法！使用service-url的话，检测不到，会继续使用默认的地址。
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+# 由于这个配置文件是单节点，所以配置不主动注册，因为注册链接就是自身，没意义。
