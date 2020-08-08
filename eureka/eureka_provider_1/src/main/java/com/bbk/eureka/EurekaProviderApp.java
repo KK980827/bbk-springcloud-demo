@@ -8,39 +8,45 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Slf4j
 @Getter
 @RestController
 @SpringBootApplication
-//开启Eureka Client服务，
+@EnableDiscoveryClient
 @EnableEurekaClient
-public class EurekaClientApp implements ApplicationRunner {
+public class EurekaProviderApp implements ApplicationRunner {
 
     @Value(value = "${server.port:8080}")
     private Integer port;
-    @Value(value = "${spring.profiles.active:default}")
-    private String active;
 
     public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication(EurekaClientApp.class);
+        SpringApplication springApplication = new SpringApplication(EurekaProviderApp.class);
         springApplication.setBannerMode(Banner.Mode.OFF);
         springApplication.run(args);
     }
 
-    @GetMapping("/hi")
+    /**
+     * 模拟应用对外提供服务。
+     * @return 当前时间
+     */
+    @GetMapping("/now")
     public String hi() {
-        return "我是主动注册到Eureka服务中心，并对外提供web服务的eureka_client_1, active = " + active;
+        return "我是来自端口" + port + "的服务提供方，我提供的结果：" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
     }
 
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         System.out.println("------------------------------------");
-        System.out.println("client running... active profiles = " + active);
+        System.out.println("time provider running... port = " + port);
         System.out.println("------------------------------------");
     }
 }
