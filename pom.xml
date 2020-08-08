@@ -19,8 +19,8 @@
     </parent>
 
     <modules>
-        <module>eureka/eureka_server</module>
-        <module>eureka/eureka_client_1</module>
+        <module>eureka/server</module>
+        <module>eureka/client</module>
     </modules>
 
     <properties>
