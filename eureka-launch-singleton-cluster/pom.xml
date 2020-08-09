@@ -15,7 +15,7 @@
     <artifactId>eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka</name>
-    <description>Demo project for Spring Boot</description>
+    <description>EurekaServer</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

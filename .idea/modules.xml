@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/zuul-router-and-auth/bye-provider/bye-provider.iml" filepath="$PROJECT_DIR$/zuul-router-and-auth/bye-provider/bye-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demos.iml" filepath="$PROJECT_DIR$/.idea/demos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-launch-sington-cluster/eureka-launch-sington-cluster.iml" filepath="$PROJECT_DIR$/eureka-launch-sington-cluster/eureka-launch-sington-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-launch-singleton-cluster/eureka-launch-singleton-cluster.iml" filepath="$PROJECT_DIR$/eureka-launch-singleton-cluster/eureka-launch-singleton-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-router-and-auth/hello-provider/hello-provider.iml" filepath="$PROJECT_DIR$/zuul-router-and-auth/hello-provider/hello-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-and-customer-feign-call/sum-customer/sum-customer.iml" filepath="$PROJECT_DIR$/provider-and-customer-feign-call/sum-customer/sum-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-and-customer-feign-call/sum-provider/sum-provider.iml" filepath="$PROJECT_DIR$/provider-and-customer-feign-call/sum-provider/sum-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-customer/time-customer.iml" filepath="$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-customer/time-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-provider/time-provider.iml" filepath="$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-provider/time-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-router-and-auth/zuul-provider/zuul-provider.iml" filepath="$PROJECT_DIR$/zuul-router-and-auth/zuul-provider/zuul-provider.iml" />
     </modules>
   </component>
 </project>

@@ -16,6 +16,9 @@
         <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/time-provider/pom.xml" />
         <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/time-customer/pom.xml" />
         <option value="$PROJECT_DIR$/provider-and-customer-feigen-call/sum-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-router-and-auth/hello-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-router-and-auth/bye-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-router-and-auth/zuul-provider/pom.xml" />
       </list>
     </option>
   </component>

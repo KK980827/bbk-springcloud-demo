@@ -1,0 +1,22 @@
+server:
+  port: 12000
+eureka:
+  instance:
+    hostname: zuul0.kk.com
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka0.kk.com:8000/eureka/
+spring:
+  application:
+    name: eureka-provider-zuul
+zuul:
+  routes:
+    hello-api:
+      # 配置路由规则，所以以hello-api开头的请求，全部是针对服务 EUREKA-PROVIDER-HELLO
+      path: /hello-api/**
+      serviceId: EUREKA-PROVIDER-HELLO
+    bye-api:
+      path: /bye-api/**
+      serviceId: EUREKA-PROVIDER-BYE
