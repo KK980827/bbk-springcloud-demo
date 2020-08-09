@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hello-provider" />
+        <module name="config-server" />
         <module name="bye-provider" />
         <module name="eureka-launch-singleton-cluster" />
         <module name="zuul-provider" />
         <module name="time-provider" />
         <module name="time-customer" />
+        <module name="config-client" />
       </profile>
       <profile name="Annotation profile for sum-provider" enabled="true">
         <sourceOutputDir name="../../provider-and-customer-feigen-call/sum-provider/target/generated-sources/annotations" />
@@ -28,6 +30,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bye-provider" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="eureka-launch-singleton-cluster" target="1.8" />
       <module name="hello-provider" target="1.8" />
       <module name="sum-customer" target="1.8" />
@@ -40,6 +44,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bye-provider" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka-launch-singleton-cluster" options="-parameters" />
       <module name="hello-provider" options="-parameters" />
       <module name="sum-customer" options="-parameters" />

@@ -1,0 +1,18 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: git-config-server
+  cloud:
+    config:
+      # 仓库分支
+      label: master
+      server:
+        git:
+          # 配置中心要连接的gir地址,注意是URI, 不是URL
+          uri: https://github.com/KK980827/bbk-springcloud-demo-config.git
+          # git仓库下具体的文件夹路径。设置之后，将默认在该文件夹下处理配置信息。
+          searchPaths: demo
+          # 如果git仓库私有的，则需要设置账户密码。
+          username:
+          password:

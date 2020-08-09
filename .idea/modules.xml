@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/zuul-router-and-auth/bye-provider/bye-provider.iml" filepath="$PROJECT_DIR$/zuul-router-and-auth/bye-provider/bye-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config-client/config-client.iml" filepath="$PROJECT_DIR$/config/config-client/config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config-server/config-server.iml" filepath="$PROJECT_DIR$/config/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demos.iml" filepath="$PROJECT_DIR$/.idea/demos.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-launch-singleton-cluster/eureka-launch-singleton-cluster.iml" filepath="$PROJECT_DIR$/eureka-launch-singleton-cluster/eureka-launch-singleton-cluster.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-router-and-auth/hello-provider/hello-provider.iml" filepath="$PROJECT_DIR$/zuul-router-and-auth/hello-provider/hello-provider.iml" />

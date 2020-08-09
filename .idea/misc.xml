@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/zuul-router-and-auth/hello-provider/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-router-and-auth/bye-provider/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-router-and-auth/zuul-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/config/server/pom.xml" />
+        <option value="$PROJECT_DIR$/config/config-client/pom.xml" />
       </list>
     </option>
   </component>

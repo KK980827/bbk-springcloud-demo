@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      label: master
+      # 去文件application-c1.yaml获取信息
+      # profile: c1
+      # 去文件application-c2.yaml获取信息
+      profile: c2
+      uri: http://config-server0.kk.com:7000
