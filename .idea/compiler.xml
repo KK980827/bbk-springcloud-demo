@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sum-customer" />
         <module name="time-provider" />
         <module name="time-customer" />
         <module name="eureka-launch-sington-cluster" />
+      </profile>
+      <profile name="Annotation profile for sum-provider" enabled="true">
+        <sourceOutputDir name="../../provider-and-customer-feigen-call/sum-provider/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../provider-and-customer-feigen-call/sum-provider/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="sum-provider" />
+      </profile>
+      <profile name="Annotation profile for sum-customer" enabled="true">
+        <sourceOutputDir name="../../provider-and-customer-feigen-call/sum-customer/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../provider-and-customer-feigen-call/sum-customer/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sum-customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

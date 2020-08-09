@@ -1,4 +1,4 @@
-# 服务提供与调用(ribbon + RestTemplate)
+# 服务提供与调用(Ribbon+ Hystrix+ RestTemplate)
 
 在Eureka注册中心启动的情况下：
 
@@ -39,6 +39,50 @@ Ribbon之后，会自动检索出该服务名称对应的url。进行请求。
 
 在通过Customer进行请求的时候，外部是通过服务名进行请求的，但是经过Ribbon处理之后，会发现该服务
 对应了两个具体的实例，Ribbon就会根据相关的策略，轮询/随机请求这两个URL。
+
+# 熔断器实现：
+Ribbon可以结合Hystrix在服务不可用的时候，实现熔断降级策略
+- 引入Hystrix组件：
+```xml
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+```
+- 启用组件：
+```java
+//启动类
+@EnableHystrix
+public class TimeCustomerApplication implements ApplicationRunner {}
+```
+- 在执行远程调用的IRemoteCall实现类方法上，设置熔断，使用注解@HystrixCommand指定，该方法执行远程调用失败之后，熔断降级时所使用
+的方法fallbackMethod。
+- 注意：【fallbackMethod方法】必须与执行远程调用的方法在同一个类，且具有相同的方法签名。
+```java
+public class RemoteCall implements IRemoteCall{
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Override
+    @HystrixCommand(fallbackMethod = "fallBackNow")
+    public String now() {
+        // url中的是，服务提供方在Eureka注册的应用名称。请求时候Ribbon会根据服务名称判断url。
+        String url = "http://EUREKA-PROVIDER-TIME/now";
+        return restTemplate.getForObject(url, String.class);
+    }
+
+    /**
+     * 远程调用失败的时候，执行的方法。方法签名必须与被调用方法一致。
+     * @return
+     */
+    private String fallBackNow() {
+        return "远程服务不可用";
+    }
+}
+```
+启动各项服务，然后关闭服务提供者，此时远程调用会失败，执行fallBackNow()方法。
+
 
 ## Tips:
 调用出现错误：

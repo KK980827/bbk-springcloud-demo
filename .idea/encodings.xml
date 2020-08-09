@@ -7,9 +7,9 @@
     <file url="file://$PROJECT_DIR$/provider-and-customer-feign-call/sum-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-and-customer-feign-call/sum-provider/src/main/java/com/bbk/springcloud/demo/provider/sum/SumProviderApplication.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider-and-customer-feign-call/sum-provider/src/main/resources/application.yaml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-call/time-customer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-call/time-provider" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-call/time-provider/src/main/resources/application.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-customer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-and-customer-ribbon-hystrix-call/time-provider/src/main/resources/application.yaml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
