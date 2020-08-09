@@ -6,22 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="customer" />
+        <module name="sum-customer" />
+        <module name="time-provider" />
+        <module name="time-customer" />
         <module name="eureka-launch-sington-cluster" />
-        <module name="provider" />
+        <module name="sum-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="customer" target="1.8" />
       <module name="eureka-launch-sington-cluster" target="1.8" />
-      <module name="provider" target="1.8" />
+      <module name="sum-customer" target="1.8" />
+      <module name="sum-provider" target="1.8" />
+      <module name="time-customer" target="1.8" />
+      <module name="time-provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="customer" options="-parameters" />
       <module name="eureka-launch-sington-cluster" options="-parameters" />
-      <module name="provider" options="-parameters" />
+      <module name="sum-customer" options="-parameters" />
+      <module name="sum-provider" options="-parameters" />
+      <module name="time-customer" options="-parameters" />
+      <module name="time-provider" options="-parameters" />
     </option>
   </component>
 </project>

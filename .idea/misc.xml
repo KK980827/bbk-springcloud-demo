@@ -9,6 +9,13 @@
         <option value="$PROJECT_DIR$/eureka-launch-sington-cluster/pom.xml" />
         <option value="$PROJECT_DIR$/provider-and-customer-call/provider/pom.xml" />
         <option value="$PROJECT_DIR$/provider-and-customer-call/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-feigen-call/provider/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/provider/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-feigen-call/sum-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/time-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-ribbon-call/time-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/provider-and-customer-feigen-call/sum-provider/pom.xml" />
       </list>
     </option>
   </component>

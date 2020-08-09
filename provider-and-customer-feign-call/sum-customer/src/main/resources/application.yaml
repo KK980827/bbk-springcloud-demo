@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: eureka-customer-1
+server:
+  port: 10001
+eureka:
+  client:
+    # 是否作为客户端主动对外注册
+    register-with-eureka: true
+    # 是否从别的Server拉取客户端注册信息
+    fetch-registry: true
+    serviceUrl:
+      # Eureka server的地址, 只会注册到eureka集群的节点1上，如果集群启动，会自动同步注册信息到其他节点上.
+      defaultZone: http://eureka0.kk.com:8000/eureka/
+  instance:
+    hostname: customer1.kk.com
+    lease-renewal-interval-in-seconds: 3
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            #设置调用者等待命令执行的超时限制，超过此时间，HystrixCommand被标记为TIMEOUT，并执行回退逻辑
+            timeoutInMilliseconds: 15000
+      circuitBreaker:
+        #设置在一个滚动窗口中，打开断路器的最少请求数
+        requestVolumeThreshold: 200
+        #设置在回路被打开，拒绝请求到再次尝试请求并决定回路是否继续打开的时间
+        sleepWindowInMilliseconds: 5000
+        #设置打开回路并启动回退逻辑的错误比率
+        errorThresholdPercentage: 50
+  threadpool:
+    default:
+      #核心线程数
+      coreSize: 200
+      #最大队列数
+      maxQueueSize: 200
+      #队列拒绝阈值设置
+      queueSizeRejectionThreshold: 160
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 3000
+  #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetries: 1
+  #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 1
+  #是否所有操作都重
+  OkToRetryOnAllOperations: false
